@@ -13,8 +13,8 @@ public class Calculator {
      System.out.println("4.Press 4 to  perform Division");
      System.out.println("5.Press 5 for Exit");
      System.out.print("Enter your choice: ");
-     int c=sc.nextInt();
-     switch (c){
+     int choices=sc.nextInt();
+     switch (choices){
          case 1:
              System.out.println("Enter first number for Addition");
              double n1=sc.nextInt();

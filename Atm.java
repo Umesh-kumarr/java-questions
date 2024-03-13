@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Atm {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double balance = 50000.00; // Initial balance
+        double amount = 50000.00; // Initial balance
 
         while (true) {
             System.out.println("Welcome to ATM!");
@@ -15,24 +15,24 @@ public class Atm {
             int c = scanner.nextInt();
 
             if (c == 1) {
-                System.out.println("Your current balance is : $" + balance);
+                System.out.println("Your current balance is : $" + amount);
             } 
             else if (c == 2) {
                 System.out.print("Enter amount to deposit: $");
                 double depositAmount = scanner.nextDouble();
-                balance = balance+ depositAmount;
-                System.out.println("Deposit successful! New balance is : $" + balance);
+                amount = amount+ depositAmount;
+                System.out.println("Deposit successful! New balance is : $" + amount);
             } 
             else if (c == 3) {
                 System.out.print("Enter amount which you want to withdraw: $");
                 double withdrawAmount = scanner.nextDouble();
 
-                if (withdrawAmount > balance) {
+                if (withdrawAmount > amount) {
                     System.out.println("Oops! Insufficient funds!");
                 } 
                 else {
-                    balance = balance-withdrawAmount;
-                    System.out.println("Withdrawal successful! New balance is : $" + balance);
+                    amount = amount-withdrawAmount;
+                    System.out.println("Withdrawal successful! New balance is : $" + amount);
                 }
             } 
             else if (c == 4) {
